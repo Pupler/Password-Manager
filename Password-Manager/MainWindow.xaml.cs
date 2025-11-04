@@ -20,9 +20,29 @@ namespace Password_Manager
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> passwords = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
+            // Test data
+            passwords.Add("Gmail | test@gmail.com | 123456");
+            listPasswords.ItemsSource = passwords;
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            string newData = $"{txtService.Text} | {txtUsername.Text} | {txtPassword.Text}";
+            passwords.Add(newData);
+
+            // Update list
+            listPasswords.ItemsSource = null;
+            listPasswords.ItemsSource = passwords;
+
+            // Clear list
+            txtService.Text = "Service";
+            txtUsername.Text = "Username";
+            txtPassword.Text = "Password";
         }
     }
 }

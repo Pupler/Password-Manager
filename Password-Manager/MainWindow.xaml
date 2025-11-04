@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+		<StackPanel Margin="20">
+			<TextBlock Text="Password Manager" FontSize="24" FontWeight="Bold"/>
+
+			<!-- Input fields -->
+			<TextBox x:Name="txtService" Margin="0,15,0,0" Padding="5" Text="Service"/>
+			<TextBox x:Name="txtUsername" Margin="0,5,0,0" Padding="5" Text="Username"/>
+			<TextBox x:Name="txtPassword" Margin="0,5,0,10" Padding="5" Text="Password"/>
+
+			<Button x:Name="btnAdd" Content="Add password" Click="btnAdd_Click"
+					Height="35" Background="Black" Foreground="White"/>
+
+			<!-- Passwords list -->
+			<ListBox x:Name="listPasswords" Margin="0,20,0,0" Height="250"/>
+		</StackPanel>
     </Grid>
 </Window>
