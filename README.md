@@ -25,6 +25,10 @@ start Password-Manager.sln
 # Press CTRL + F5 in Visual Studio!
 ```
 
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 ---
 
 ## ⚠️ Important Note
