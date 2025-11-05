@@ -1,25 +1,77 @@
-﻿<Window x:Class="Password_Manager.MainWindow"
+﻿<Window FontFamily="Montserrat" x:Class="Password_Manager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password_Manager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-		<StackPanel Margin="20">
-			<TextBlock Text="Password Manager" FontSize="24" FontWeight="Bold"/>
+        Title="PasswordManager" Height="770" Width="650"
+        Background="#1E1E1E">
 
-			<!-- Input fields -->
-			<TextBox x:Name="txtService" Margin="0,15,0,0" Padding="5" Text="Service"/>
-			<TextBox x:Name="txtUsername" Margin="0,5,0,0" Padding="5" Text="Username"/>
-			<TextBox x:Name="txtPassword" Margin="0,5,0,10" Padding="5" Text="Password"/>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
 
-			<Button x:Name="btnAdd" Content="Add password" Click="btnAdd_Click"
-					Height="35" Background="Black" Foreground="White"/>
+		<!-- Header -->
+		<Border Grid.Row="0" Background="#2D2D30" Padding="20">
+			<StackPanel>
+				<TextBlock Text="🔐 PasswordManager"
+                          FontSize="28" FontWeight="Bold"
+                          Foreground="#00D4AA"
+                          HorizontalAlignment="Center"/>
+				<TextBlock Text="Your secure password vault"
+                          FontSize="14" Foreground="#CCCCCC"
+                          HorizontalAlignment="Center" Margin="0,5,0,0"/>
+			</StackPanel>
+		</Border>
 
-			<!-- Passwords list -->
-			<ListBox x:Name="listPasswords" Margin="0,20,0,0" Height="250"/>
+		<!-- Main Content -->
+		<StackPanel Grid.Row="1" Margin="30,25,30,20">
+
+			<!-- Input Card -->
+			<Border Background="#252526" Padding="20" Margin="0,0,0,20">
+				<StackPanel>
+					<TextBlock Text="Store New Password" FontSize="16" FontWeight="SemiBold"
+                              Foreground="#00D4AA" Margin="0,0,0,15"/>
+
+					<TextBox x:Name="txtService" Padding="12" FontSize="14"
+                            Background="#3E3E42" Foreground="White" BorderThickness="0"
+                            Text="Service" Margin="0,0,0,10"/>
+
+					<TextBox x:Name="txtUsername" Padding="12" FontSize="14"
+                            Background="#3E3E42" Foreground="White" BorderThickness="0"
+                            Text="Username" Margin="0,0,0,10"/>
+
+					<TextBox x:Name="txtPassword" Padding="12" FontSize="14"
+                            Background="#3E3E42" Foreground="White" BorderThickness="0"
+                            Text="Password" Margin="0,0,0,15"/>
+
+					<Button x:Name="btnAdd" Content="➕ Add Password"
+                           Click="btnAdd_Click" Height="42" FontSize="14" FontWeight="SemiBold"
+                           Background="#00D4AA" Foreground="#1E1E1E" BorderThickness="0"/>
+				</StackPanel>
+			</Border>
+
+			<!-- Passwords List -->
+			<Border Background="#252526" Padding="20">
+				<StackPanel>
+					<TextBlock Text="Stored Passwords" FontSize="16" FontWeight="SemiBold"
+                              Foreground="#00D4AA" Margin="0,0,0,10"/>
+
+					<ListBox x:Name="listPasswords" Height="220"
+                            Background="#2D2D30" BorderThickness="0" Foreground="White">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<Border Background="#3E3E42" Margin="2" Padding="12">
+									<TextBlock Text="{Binding}" FontSize="13" Foreground="White"/>
+								</Border>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</StackPanel>
+			</Border>
 		</StackPanel>
-    </Grid>
+	</Grid>
 </Window>
