@@ -55,11 +55,17 @@
 			</Border>
 
 			<!-- Passwords List -->
+			
 			<Border Background="#252526" Padding="20">
 				<StackPanel>
+					
 					<TextBlock Text="Stored Passwords" FontSize="16" FontWeight="SemiBold"
                               Foreground="#00D4AA" Margin="0,0,0,10"/>
 
+					<TextBox x:Name="passwordSearch_input" Padding="12" FontSize="14"
+							 Background="#3E3E42" Foreground="White" BorderThickness="0"
+							 Text="Search..." TextChanged="passwordSearch"/>
+					
 					<ListBox x:Name="listPasswords" Height="220"
                             Background="#2D2D30" BorderThickness="0" Foreground="White">
 						<ListBox.ItemTemplate>
@@ -70,8 +76,10 @@
 							</DataTemplate>
 						</ListBox.ItemTemplate>
 					</ListBox>
+					
 				</StackPanel>
 			</Border>
+			
 		</StackPanel>
 	</Grid>
 </Window>

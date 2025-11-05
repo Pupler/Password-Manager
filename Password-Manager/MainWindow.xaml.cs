@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Linq;
+
 namespace Password_Manager
 {
     /// <summary>
@@ -43,6 +45,16 @@ namespace Password_Manager
             txtService.Text = "Service";
             txtUsername.Text = "Username";
             txtPassword.Text = "Password";
+        }
+
+        private void passwordSearch(object sender, TextChangedEventArgs e)
+        {
+            if (passwordSearch_input == null || listPasswords == null) return;
+            if (passwordSearch_input.Text == "Search...") return;
+
+            var searchText = passwordSearch_input.Text.ToLower();
+            var filteredPasswords = passwords.Where(p => p.ToLower().Contains(searchText)).ToList();
+            listPasswords.ItemsSource = filteredPasswords;
         }
     }
 }
