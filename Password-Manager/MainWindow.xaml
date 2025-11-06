@@ -11,7 +11,7 @@
 		FontFamily="Montserrat"
         Title="PasswordManager" Height="820" Width="650">
 
-	<Grid>
+	<Grid Background="#1E1E1E">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30"/>
 			<RowDefinition Height="Auto"/>
@@ -21,7 +21,7 @@
 		<!-- Custom panel -->
 		<Border Grid.Row="0" Height="30" Background="#2D2D30" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 			<Grid>
-				<TextBlock Text="PasswordManager" Foreground="White" FontSize="12"
+				<TextBlock Text="Password Manager" Foreground="White" FontSize="12"
 						   VerticalAlignment="Center" Margin="10,0,0,0"/>
 
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
