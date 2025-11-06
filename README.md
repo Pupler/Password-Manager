@@ -1,15 +1,16 @@
 ﻿# 🔐 Password Manager
 
-A simple desktop password manager built with WPF (.NET Framework).
+A modern desktop password manager application built with WPF (.NET Framework), featuring a sleek dark theme and essential password management capabilities.
 
 ## 📸 Preview
 
-<img width="642" height="771" alt="grafik" src="https://github.com/user-attachments/assets/15e41602-5b2a-45ca-ad57-e443ca15637c" />
+<img width="644" height="771" alt="grafik" src="https://github.com/user-attachments/assets/e631549a-bb32-4517-90a6-4da26a6a120d" />
 
 ## ✨ Features
 - ➕ Add password entries (service, username, password)
-- 👀 View stored passwords in a list
+- 👀 View stored passwords in the list
 - 🎨 Modern dark interface
+- 🔍 Search through stored passwords
 
 ## 🛠️ Technology Stack
 - C# 
