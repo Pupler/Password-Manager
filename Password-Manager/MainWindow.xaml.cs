@@ -56,5 +56,20 @@ namespace Password_Manager
             var filteredPasswords = passwords.Where(p => p.ToLower().Contains(searchText)).ToList();
             listPasswords.ItemsSource = filteredPasswords;
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
