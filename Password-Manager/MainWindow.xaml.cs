@@ -71,5 +71,15 @@ namespace Password_Manager
         {
             this.Close();
         }
+
+        private void btnGenerate_Click(object sender, RoutedEventArgs e)
+        {
+            string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%";
+            var random = new Random();
+            string password = new string(Enumerable.Repeat(chars, 12)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            txtPassword.Text = password;
+        }
     }
 }

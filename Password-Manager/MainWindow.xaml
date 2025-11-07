@@ -9,7 +9,7 @@
 		AllowsTransparency="True"
 		Background="Transparent"
 		FontFamily="Montserrat"
-        Title="PasswordManager" Height="820" Width="650">
+        Title="PasswordManager" Height="860" Width="700">
 
 	<Grid Background="#1E1E1E">
 		<Grid.RowDefinitions>
@@ -21,8 +21,9 @@
 		<!-- Custom panel -->
 		<Border Grid.Row="0" Height="30" Background="#2D2D30" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 			<Grid>
-				<TextBlock Text="Password Manager" Foreground="White" FontSize="12"
-						   VerticalAlignment="Center" Margin="10,0,0,0"/>
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+					<TextBlock Text="Password Manager" Foreground="White" FontSize="12" VerticalAlignment="Center"/>
+				</StackPanel>
 
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
 					<Button Content="_" Width="30" Height="30" Background="Transparent"
@@ -66,6 +67,10 @@
 					<TextBox x:Name="txtPassword" Padding="12" FontSize="14"
                             Background="#3E3E42" Foreground="White" BorderThickness="0"
                             Text="Password" Margin="0,0,0,15"/>
+
+					<Button x:Name="btnGenerate" Content="🎲 Generate Password"
+							Click="btnGenerate_Click" Height="35" Background="#0078D7"
+							Foreground="White" Margin="0,5,0,10"/>
 
 					<Button x:Name="btnAdd" Content="➕ Add Password"
                            Click="btnAdd_Click" Height="42" FontSize="14" FontWeight="SemiBold"
