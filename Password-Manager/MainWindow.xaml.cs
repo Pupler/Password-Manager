@@ -87,5 +87,17 @@ namespace Password_Manager
 
             txtPassword.Text = password;
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (listPasswords.SelectedItem != null)
+            {
+                passwords.Remove(listPasswords.SelectedItem.ToString());
+
+                // Update list
+                listPasswords.ItemsSource = null;
+                listPasswords.ItemsSource = passwords;
+            }
+        }
     }
 }
