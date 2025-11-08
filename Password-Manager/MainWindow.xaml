@@ -9,7 +9,7 @@
 		AllowsTransparency="True"
 		Background="Transparent"
 		FontFamily="Montserrat"
-        Title="PasswordManager" Height="860" Width="700">
+        Title="PasswordManager" Height="820" Width="700">
 
 	<Grid Background="#1E1E1E">
 		<Grid.RowDefinitions>
@@ -63,14 +63,21 @@
 					<TextBox x:Name="txtUsername" Padding="12" FontSize="14"
                             Background="#3E3E42" Foreground="White" BorderThickness="0"
                             Text="Username" Margin="0,0,0,10"/>
+					
+					<Grid Margin="0,0,0,15">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
 
-					<TextBox x:Name="txtPassword" Padding="12" FontSize="14"
-                            Background="#3E3E42" Foreground="White" BorderThickness="0"
-                            Text="Password" Margin="0,0,0,15"/>
+						<TextBox x:Name="txtPassword" Grid.Column="0" Padding="12" FontSize="14"
+								Background="#3E3E42" Foreground="White" BorderThickness="0"
+								Text="Password" VerticalAlignment="Center"/>
 
-					<Button x:Name="btnGenerate" Content="🎲 Generate Password"
-							Click="btnGenerate_Click" Height="35" Background="#0078D7"
-							Foreground="White" Margin="0,5,0,10"/>
+						<Button x:Name="btnGenerate" Grid.Column="1" Content="🎲 Generate"
+								Click="btnGenerate_Click" Background="#0078D7"
+								Foreground="White" Padding="15,0"/>
+					</Grid>
 
 					<Button x:Name="btnAdd" Content="➕ Add Password"
                            Click="btnAdd_Click" Height="42" FontSize="14" FontWeight="SemiBold"
