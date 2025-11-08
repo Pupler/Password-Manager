@@ -41,7 +41,13 @@ namespace Password_Manager
             listPasswords.ItemsSource = null;
             listPasswords.ItemsSource = passwords;
 
-            // Clear list
+            // Clear fields
+            clearFields();
+
+        }
+
+        private void clearFields()
+        {
             txtService.Text = "Service";
             txtUsername.Text = "Username";
             txtPassword.Text = "Password";
