@@ -4,7 +4,7 @@ A modern desktop password manager application built with WPF (.NET Framework), f
 
 ## 📸 Preview
 
-<img width="657" height="828" alt="grafik" src="https://github.com/user-attachments/assets/b6f0ab02-c258-4a90-9017-063bb2add53e" />
+<img width="705" height="824" alt="grafik" src="https://github.com/user-attachments/assets/6286b026-29d5-466a-9092-a597267af535" />
 
 ## ✨ Features
 - ➕ Add password entries (service, username, password)
