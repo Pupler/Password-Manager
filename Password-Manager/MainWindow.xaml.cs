@@ -86,7 +86,9 @@ namespace Password_Manager
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
             string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%";
+
             var random = new Random();
+
             string password = new string(Enumerable.Repeat(chars, 12)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
 
@@ -95,9 +97,11 @@ namespace Password_Manager
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var selectedItem = listPasswords.SelectedItem.ToString();
+
             if (listPasswords.SelectedItem != null)
             {
-                passwords.Remove(listPasswords.SelectedItem.ToString());
+                passwords.Remove(selectedItem);
 
                 // Update list
                 updateList();
