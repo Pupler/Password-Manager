@@ -38,12 +38,17 @@ namespace Password_Manager
             passwords.Add(newData);
 
             // Update list
-            listPasswords.ItemsSource = null;
-            listPasswords.ItemsSource = passwords;
+            updateList();
 
             // Clear fields
             clearFields();
 
+        }
+
+        private void updateList()
+        {
+            listPasswords.ItemsSource = null;
+            listPasswords.ItemsSource = passwords;
         }
 
         private void clearFields()
@@ -95,8 +100,7 @@ namespace Password_Manager
                 passwords.Remove(listPasswords.SelectedItem.ToString());
 
                 // Update list
-                listPasswords.ItemsSource = null;
-                listPasswords.ItemsSource = passwords;
+                updateList();
             }
         }
     }
