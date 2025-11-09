@@ -96,12 +96,18 @@
 					<TextBox x:Name="passwordSearch_input" Padding="12" FontSize="14"
 							 Background="#3E3E42" Foreground="White" BorderThickness="0"
 							 Text="Search..." TextChanged="passwordSearch"/>
-					
+
 					<ListBox x:Name="listPasswords" Height="220"
-                            Background="#2D2D30" BorderThickness="0" Foreground="White">
+							 Background="#2D2D30" BorderThickness="0" Foreground="White"
+							 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+						<ListBox.ItemContainerStyle>
+							<Style TargetType="ListBoxItem">
+								<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+							</Style>
+						</ListBox.ItemContainerStyle>
 						<ListBox.ItemTemplate>
 							<DataTemplate>
-								<Border Background="#3E3E42" Margin="2" Padding="12">
+								<Border Background="#3E3E42" Margin="0,5,0,0" Padding="12">
 									<TextBlock Text="{Binding}" FontSize="13" Foreground="White"/>
 								</Border>
 							</DataTemplate>
