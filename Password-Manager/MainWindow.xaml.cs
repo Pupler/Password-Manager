@@ -107,5 +107,12 @@ namespace Password_Manager
                 updateList();
             }
         }
+
+        private void copyClick(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            string text = btn.Tag.ToString();
+            Clipboard.SetText(text);
+        }
     }
 }

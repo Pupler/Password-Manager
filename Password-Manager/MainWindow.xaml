@@ -108,7 +108,13 @@
 						<ListBox.ItemTemplate>
 							<DataTemplate>
 								<Border Background="#3E3E42" Margin="0,5,0,0" Padding="12">
-									<TextBlock Text="{Binding}" FontSize="13" Foreground="White"/>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock Text="{Binding}" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+										
+										<Button Content="📋" Margin="10,0,0,0" Background="Transparent"
+												Foreground="White" BorderThickness="0" Click="copyClick"
+												Tag="{Binding}"/>
+									</StackPanel>
 								</Border>
 							</DataTemplate>
 						</ListBox.ItemTemplate>
