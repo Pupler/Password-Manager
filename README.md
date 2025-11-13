@@ -1,6 +1,6 @@
 ﻿# 🔐 Password Manager
 
-A modern desktop password manager application built with WPF (.NET Framework), featuring a sleek dark theme and essential password management capabilities.
+A modern WPF (.NET Framework) desktop application for managing passwords, featuring a sleek dark theme and all essential security tools.
 
 ## 📸 Preview
 
